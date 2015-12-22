@@ -1,5 +1,4 @@
-//Hide error message
-var message = document.getElementById("message");
+var errorMessage = document.getElementById("error_message");
 
 function validatePassword(password) {
 	return password.length >= 5;
@@ -20,7 +19,7 @@ function validateForm() {
 	var email = document.forms[0].email.value;
 	var password = document.forms[0].password.value;
 	if (!validatePassword(password) || !validateEmail(email) || !validateName(name)) {
-		message.style.display = "block";
+		errorMessage.style.display = "block";
 		return false;
 	}
 	return true;
